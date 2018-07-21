@@ -29,4 +29,19 @@ public class KeyInput : MonoBehaviour
 		movement = transform.TransformDirection(movement); // Вектор движения от локальных к глобальным координатам
 		_charController.Move(movement); // Заставим этот вектор перемещать компонент CharacterController
 	}
+
+	public void ReactOnTurboSpeed()
+	{
+		Debug.Log("TUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUURBO");
+		StartCoroutine(Turbo());
+	}
+	
+	public IEnumerator Turbo()
+	{
+		Debug.Log("TUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUURBO");
+		this.speed = 10.0f;
+		yield return new WaitForSeconds(5);
+		Debug.Log("NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOORM");
+		this.speed = 3.0f;
+	}
 }

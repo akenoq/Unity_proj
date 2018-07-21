@@ -10,7 +10,10 @@
         <e p="MouseVision.cs" t="Include" />
         <e p="MovementBall.cs" t="Include" />
         <e p="RayBullet.cs" t="Include" />
+        <e p="ReactiveTarget.cs" t="Include" />
+        <e p="SceneController.cs" t="Include" />
         <e p="Spin.cs" t="Include" />
+        <e p="TurboSpeed.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />

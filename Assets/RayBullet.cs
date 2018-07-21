@@ -22,7 +22,14 @@ public class RayBullet : MonoBehaviour {
 			Ray ray = _camera.ScreenPointToRay(point);
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit)) {
-				StartCoroutine(SphereIndicator(hit.point)); // Запуск сопрограммы в ответ на попадание.
+				GameObject hitObject = hit.transform.gameObject; // Получаем объект, в который попал луч.
+				ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
+				if (target != null) { // Проверяем наличие у этого объекта компонента ReactiveTarget.
+					Debug.Log("Target hit");
+					target.ReactToHit(); // Вызов метода для мишени вместо генерации отладочного сообщения.
+				} else {
+					StartCoroutine(SphereIndicator(hit.point)); // Запуск сопрограммы в ответ на попадание.
+				}
 			}
 		}
 	}
