@@ -5,7 +5,7 @@ using UnityEngine;
 [AddComponentMenu("Control Script/Key Input (WSAD)")] // добавляем скрипт в меню компонентов при добаулении
 public class KeyInput : MonoBehaviour
 {
-	public float speed = 1.0f;
+	public float speed = 3.0f;
 	public float gravity = -9.8f;
 
 	private CharacterController _charController; // Переменная для ссылки на компонент CharacterController
@@ -23,7 +23,6 @@ public class KeyInput : MonoBehaviour
 		Vector3 movement = new Vector3(deltaX, 0, deltaZ);
 		movement = Vector3.ClampMagnitude(movement, speed); // Ограничим движение по диагонали той же скоростью,
 															// что и движение параллельно осям
-		
 		movement.y = gravity; // Используем значение переменной gravity вместо нуля
 		
 		movement *= Time.deltaTime;

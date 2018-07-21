@@ -17,9 +17,8 @@ public class RayBullet : MonoBehaviour {
 	}
 		
 	void Update() { // Эта функция по большей части содержит знакомый нам код бросания луча из листинга 3.1.
-		if (Input.GetMouseButtonDown(0)) {
-			Vector3 point = new Vector3(
-				_camera.pixelWidth/2, _camera.pixelHeight/2, 0);
+		if (Input.GetButtonDown("Fire1")) { // Input.GetMouseButtonDown(0)
+			Vector3 point = new Vector3(_camera.pixelWidth / 2, _camera.pixelHeight / 2, 0);
 			Ray ray = _camera.ScreenPointToRay(point);
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit)) {
@@ -28,8 +27,11 @@ public class RayBullet : MonoBehaviour {
 		}
 	}
 	private IEnumerator SphereIndicator(Vector3 pos) { // Сопрограммы пользуются функциями IEnumerator.
-			GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+		GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 		sphere.transform.position = pos;
+		sphere.transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
+
+		// заставляем сопрограмму остановить работу на одну секунду
 		yield return new WaitForSeconds(1); // Ключевое слово yield указывает сопрограмме, когда следует остановиться.
 			Destroy(sphere); // Удаляем этот GameObject и очищаем память.
 	}

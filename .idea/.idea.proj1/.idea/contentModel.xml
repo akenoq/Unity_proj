@@ -5,6 +5,7 @@
     <e p="C:\Users\Public\Documents\Unity Projects\proj1" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="EnemyAI.cs" t="Include" />
         <e p="KeyInput.cs" t="Include" />
         <e p="MouseVision.cs" t="Include" />
         <e p="MovementBall.cs" t="Include" />
