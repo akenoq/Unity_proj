@@ -56,9 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\EnemyAI.cs" />
+    <Compile Include="Assets\EnemyBullet.cs" />
     <Compile Include="Assets\KeyInput.cs" />
     <Compile Include="Assets\MouseVision.cs" />
     <Compile Include="Assets\MovementBall.cs" />
+    <Compile Include="Assets\PlayerCharacter.cs" />
     <Compile Include="Assets\RayBullet.cs" />
     <Compile Include="Assets\ReactiveTarget.cs" />
     <Compile Include="Assets\SceneController.cs" />

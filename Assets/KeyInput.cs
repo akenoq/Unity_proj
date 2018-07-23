@@ -32,16 +32,15 @@ public class KeyInput : MonoBehaviour
 
 	public void ReactOnTurboSpeed()
 	{
-		Debug.Log("TUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUURBO");
 		StartCoroutine(Turbo());
 	}
 	
 	public IEnumerator Turbo()
 	{
-		Debug.Log("TUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUURBO");
+		Debug.Log("TURBO");
 		this.speed = 10.0f;
 		yield return new WaitForSeconds(5);
-		Debug.Log("NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOORM");
+		Debug.Log("NORM");
 		this.speed = 3.0f;
 	}
 }

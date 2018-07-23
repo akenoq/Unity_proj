@@ -9,11 +9,11 @@ public class SceneController : MonoBehaviour {
 		for (int i = 0; i < 5; i++)
 		{
 			if (_enemyArr[i] == null) {
-            			_enemyArr[i] = Instantiate(enemyPrefab) as GameObject; // Метод, копирующий объект-шаблон.
-            			_enemyArr[i].transform.position = new Vector3(i * 3, 1, i + 0);
-            			float angle = Random.Range(0, 360);
-            			_enemyArr[i].transform.Rotate(0, angle, 0);
-            		}
+				_enemyArr[i] = Instantiate(enemyPrefab) as GameObject; // Метод, копирующий объект-шаблон.
+				_enemyArr[i].transform.position = new Vector3(i * 3, 1, i + 0);
+				float angle = Random.Range(0, 360);
+				_enemyArr[i].transform.Rotate(0, angle, 0);
+			}
 		}
 		
 	}
