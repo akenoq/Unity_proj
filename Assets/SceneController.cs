@@ -15,6 +15,5 @@ public class SceneController : MonoBehaviour {
 				_enemyArr[i].transform.Rotate(0, angle, 0);
 			}
 		}
-		
 	}
 }
